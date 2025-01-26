@@ -175,7 +175,8 @@ h1,h2,h3,h4,h5
         background-size: cover;
         background-repeat: no-repeat;
         padding-top: 120px;
-        padding-bottom: 140px;
+        padding-bottom: 410px;
+        padding-left: 200px;
         text-align: center;
 	}
 #home h1
@@ -421,3 +422,4 @@ footer hr
         color: #D43F52;
     }
 /* end social icon */
+
