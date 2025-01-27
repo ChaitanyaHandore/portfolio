@@ -174,9 +174,9 @@ h1,h2,h3,h4,h5
         background: url('../images/2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        padding-top: 120px;
+        padding-top: 500px;
         padding-bottom: 410px;
-        padding-left: 200px;
+        padding-left: 150px;
         text-align: center;
 	}
 #home h1
@@ -218,7 +218,7 @@ h1,h2,h3,h4,h5
 /* start work */
 #work
     {
-        background: #1a1a1a;
+        background:  rgba(29, 28, 28, 0.8);
     }
 #work h2
     {
@@ -333,7 +333,7 @@ h1,h2,h3,h4,h5
 
 #contact address
     {
-      padding-bottom: 18px;
+        padding-bottom: 180px;
     }
 	
 #contact .contact-title

@@ -1,365 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Chaitanya's Portfolio</title>
-		<meta name="keywords" content="">
-		<meta name="description" content="">
-		<meta name="author" content="templatemo">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <title>Chaitanya's Portfolio</title>
+    <link rel="shortcut icon" href='../images/1.jpg' type="jpg">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- animate -->
-		<link rel="stylesheet" href="css/animate.min.css">
-		<!-- bootstrap -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- font-awesome -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- google font -->
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
-		<!-- fullpage -->
-		<link rel="stylesheet" href="css/jquery.fullPage.css">
-		<!-- custom -->
-		<link rel="stylesheet" href="css/templatemo-style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- google font -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+    <!-- fullpage -->
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <!-- custom -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-		<style>
-			/* Basic styles for the page */
-			body {
-				font-family: Arial, sans-serif;
-				margin: 0;
-				padding: 0;
-				position: relative;
-			}
+    <style>
+        /* Basic styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
 
-			/* Styling for the top left corner with more space from the left */
-			.social-icons {
-				position: fixed;
-				top: 50px;  /* Space from the top */
-				left: 100px; /* Increased space from the left side */
-				display: flex;
-				gap: 15px;
-			}
+        /* Header Section */
+        .header {
+            position: fixed;
+            top: 50%; /* Center vertically */
+            left: 15px; /* Position on the left side */
+            transform: translateY(-50%); /* Adjust to center vertically */
+            display: flex;
+            flex-direction: column; /* Stack links vertically */
+            gap: 20px; /* Space between links */
+            align-items: flex-start; /* Align links to the left */
+            z-index: 1000; /* Ensure it stays on top of other content */
+            background-color: rgba(96, 71, 71, 0.8); /* Optional: Add a background color */
+            padding: 10px 15px; /* Optional: Add padding */
+            border-radius: 5px; /* Optional: Add rounded corners */
+        }
 
-			.social-icons a {
-				color: white;
-				font-size: 1.5em; /* Increased icon size */
-				text-decoration: none;
-			}
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.0em; /* Increase icon size */
+            transition: color 0.3s ease;
+        }
 
-			.social-icons a:hover {
-				color: #0077b5; /* Hover effect for LinkedIn */
-			}
+        .header a:hover {
+            color: #0077b5; /* Hover effect */
+        }
 
-			/* Header Section */
-			.header {
-				position: fixed;
-				top: 50px; /* Align with social icons */
-				right: 100px; /* Position on the right side */
-				display: flex;
-				gap: 20px;
-				align-items: center;
-			}
+        /* Red "Hire Me" Button */
+        .header .hire-me-btn {
+            background-color: red;
+            color: white;
+            padding: 8px 4px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.0em;
+        }
 
-			.header a {
-				color: white;
-				text-decoration: none;
-				font-size: 1.2em;
-			}
+        .header .hire-me-btn:hover {
+            background-color: darkred; /* Hover effect */
 
-			.header a:hover {
-				color: #0077b5; /* Hover effect */
-			}
+        }
 
-			/* Red "Hire Me" Button */
-			.header .hire-me-btn {
-				background-color: red;
-				color: white;
-				padding: 10px 20px;
-				border-radius: 5px;
-				text-decoration: none;
-				font-size: 1.2em;
-			}
+        /* Adjust section padding to account for fixed header */
+        #home, #work, #education, #about, #portfolio, #contact {
+            padding-left: 150px; /* Adjust as needed */
+        }
 
-			.header .hire-me-btn:hover {
-				background-color: darkred; /* Hover effect */
-			}
-		</style>
-	</head>
-	<body>
+        /* Social Media Links Section */
+        .social-icons {
+            position: fixed;
+            top: 50px;  /* Space from the top */
+            left: 100px; /* Increased space from the left side */
+            display: flex;
+            gap: 15px;
+            z-index: 1000; /* Ensure it stays on top of other content */
+        }
 
-	<div id="fullpage">
+        .social-icons a {
+            color: white;
+            font-size: 1.5em; /* Increased icon size */
+            text-decoration: none;
+        }
 
-		<!-- start home -->
-		<div id="home" class="section" style="padding-top: 180px; padding-right: 150px"> <!-- Adjust the padding-top value as needed -->
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-8 text-center wow fadeIn" data-wow-delay="0.9s">
-						<!-- Header Section -->
-						<div class="header">
-							<a href="#home">Home</a>
-							<a href="#about">About</a>
-							<a href="#portfolio">Projects</a>
-							<a href="#contact" class="hire-me-btn">Hire Me</a>
-						</div>
+        .social-icons a:hover {
+            color: #0077b5; /* Hover effect for LinkedIn */
+        }
 
-						<!-- Social Media Links -->
-						<div class="social-icons">
-							<a href="https://www.linkedin.com/in/chaitanya-handore-8a3ba024b" target="_blank" rel="noopener noreferrer">
-								<i class="fab fa-linkedin"></i>
-							</a>
-							<a href="https://github.com/ChaitanyaHandore" target="_blank" rel="noopener noreferrer">
-								<i class="fab fa-github"></i>
-							</a>
-							<a href="https://medium.com/@chaitanyahandore" target="_blank" rel="noopener noreferrer">
-								<i class="fab fa-medium-m"></i>
-							</a>
-							<a href="https://x.com/ChaitanyaHando1" target="_blank" rel="noopener noreferrer">
-								<i class="fab fa-twitter"></i>
-							</a>
-						</div>
+/* Social Media Links Section */
+.social-media-section {
+    padding: 50px 0;
+    background-color: rgba(29, 28, 28, 0.8);
+    text-align: center;
+}
 
-						<h3>Welcome to My Portfolio</h3>
-						<h1>Chaitanya Handore</h1>
-						<h2 class="rotate">SOFTWARE ENGINEER, AI ENTHUSIAST, WEB DEVELOPER, PROBLEM SOLVER</h2>
-						<p>MS in Artificial Intelligence student 🎓 | WEB DEVELOPMENT | JAVA | JAVASCRIPT | MYSQL | DATA STRUCTURES AND ALGORITHMS</p>
+.social-media-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #fff;
+}
 
-						<div class="cta-buttons">
-							<a href="#contact" class="btn">
-								<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-									<path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
-								</svg>
-								Contact Me
-							</a>
-							<a href="CV.pdf" class="btn" download>
-								<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-									<path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path>
-								</svg>
-								Download CV
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
-		<!-- start work -->
-		<div id="work" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 wow bounce">
-						<h2>WHAT I DO</h2>
-					</div>
-				</div>  
+.social-media-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
 
-				<div class="row">
-					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-laptop"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Machine Learning & AI</h3>
-								<p>I'm passionate about building machine learning models, working with data, and creating intelligent systems using Python, TensorFlow, and scikit-learn to solve real-world problems.</p>
-							</div>
-						</div>
-					</div>
+.social-media-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-link"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Data Science & Analytics</h3>
-								<p>I utilize data analytics and visualization tools like Power BI and Python's Pandas to extract valuable insights and drive decision-making from complex datasets.</p>
-							</div>
-						</div>
-					</div>
+.social-media-item i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
 
-					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-paper-plane"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Web Development</h3>
-								<p>I design and develop responsive websites that provide seamless experiences across devices using HTML, CSS, JavaScript, and frameworks like React and Angular.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end work -->
+.social-media-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
 
-		<!-- start about -->
-		<div id="about" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
-						<h2>ABOUT Chaitanya</h2>
-						<h4>Software Engineer &AMP;  AI Enthusiast</h4>
-						<p>I’m Chaitanya Handore, a master’s student in Artificial Intelligence at Dublin Business School, passionate about software engineering, AI, and data analytics. Skilled in Python, Java, Machine Learning, and data-driven decision-making, I excel at solving real-world problems through innovative solutions.</p>
-						<p>I enjoy tackling challenges, leveraging technology to drive efficiency, and turning data into actionable insights. My goal is to contribute to impactful projects that combine AI and analytics to create meaningful change.</p>
-					</div>
-					<div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
-						<span class="text-top">Python <small>80%</small></span>
-						<div class="progress">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
-						</div>
-						<span>Machine Learning <small>80%</small></span>
-						<div class="progress">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-						</div>
-						<span>Java <small>70%</small></span>
-						<div class="progress">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-						</div>
-						<span> MySQL <small>80%</small></span>
-						<div class="progress">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-						</div>
-						<span>Hadoop &AMP; Pyspark <small>60%</small></span>
-						<div class="progress">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end about -->
+.social-media-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
 
-		<!-- start portfolio -->
-		<div id="portfolio" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h2 class="wow bounce">MY PORTFOLIO</h2>
-					</div>
-					<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-						<div class="portfolio-thumb">
-							<img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img">
-							<div class="portfolio-overlay">
-								<h4>Leave Management System</h4>
-								<h5>Technologies: HTML, CSS, JavaScript, PHP, MySQL</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-						<div class="portfolio-thumb">
-							<img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img">
-							<div class="portfolio-overlay">
-								<h4>Gym Management System</h4>
-								<h5>Technologies: HTML, CSS, JavaScript, PHP</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-						<div class="portfolio-thumb">
-							<img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img">
-							<div class="portfolio-overlay">
-								<h4>Data Science Project</h4>
-								<h5>Technologies: Python, Pandas, Machine Learning</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-						<div class="portfolio-thumb">
-							<img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img">
-							<div class="portfolio-overlay">
-								<h4>Machine Learning Model</h4>
-								<h5>Technologies: Python, Scikit-Learn</h5>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-						<div class="portfolio-thumb">
-							<img src="images/portfolio-img5.jpg" class="img-responsive" alt="portfolio img">
-							<div class="portfolio-overlay">
-								<h4>Web Development Project</h4>
-								<h5>Technologies: HTML, CSS, PHP, JavaScript</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end portfolio -->
+.social-media-item a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-		<!-- start contact -->
-		<div id="contact" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5 col-lg-offset-1 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-						<address>
-							<p class="contact-title">CONTACT ME</p>
-							<p><i class="fa fa-phone"></i> +353 870979792</p>
-							<p><i class="fa fa-envelope-o"></i> me@chaitanyahandore.com</p>
-							<p><i class="fa fa-map-marker"></i> Dublin, Ireland</p>
-						</address>
-					</div>
-					<div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
-						<form role="form" method="post" action="#">
-							<input name="name" type="text" class="form-control" id="name" placeholder="Your Name">
-							<input name="email" type="email" class="form-control" id="email" placeholder="Your Email">
-							<textarea name="message" rows="5" class="form-control" id="message" placeholder="Your Message"></textarea>
-							<input name="send" type="submit" class="form-control" id="send" value="SEND ME">
-						</form>
-					</div>
-					<div class="col-md-1 col-sm-1"></div>
-				</div>
-			</div>
-		</div>
-		<!-- end contact -->
+/* GitHub Hover Effect */
+.social-media-item.github:hover {
+    background-color: #333; /* GitHub's brand color */
+}
 
-		<!-- start footer -->
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 wow fadeIn" data-wow-delay="0.9s">
-						<p> &copy; 2025 Chaitanya Handore. All rights reserved.</p>
-						<hr>
-						<ul class="social-icon">
-							<li><a href="#" class="fa fa-facebook"></a></li>
-							<li><a href="#" class="fa fa-twitter"></a></li>
-							<li><a href="#" class="fa fa-instagram"></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!-- end footer -->
+.social-media-item.github:hover i,
+.social-media-item.github:hover h3,
+.social-media-item.github:hover a {
+    color: #fff;
+}
 
-	</div>
+/* LinkedIn Hover Effect */
+.social-media-item.linkedin:hover {
+    background-color: #0077b5; /* LinkedIn's brand color */
+}
 
-	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
-	<!-- bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- fullpage -->
-	<script src="js/jquery.fullPage.js"></script>
-	<!-- smoothScroll -->
-	<script src="js/smoothscroll.js"></script>
-	<!-- wow -->
-	<script src="js/wow.min.js"></script>
-	<!-- text rotater -->
-	<script src="js/jquery.simple-text-rotator.js"></script>
-	<!-- custom -->
-	<script src="js/custom.js"></script>
+.social-media-item.linkedin:hover i,
+.social-media-item.linkedin:hover h3,
+.social-media-item.linkedin:hover a {
+    color: #fff;
+}
 
-	<!-- Smooth Scrolling Script -->
-	<script>
-		document.querySelectorAll('.header a').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
-				const targetId = this.getAttribute('href').substring(1);
-				const targetSection = document.getElementById(targetId);
-				targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			});
-		});
-	</script>
+/* Medium Hover Effect */
+.social-media-item.medium:hover {
+    background-color: #00ab6c; /* Medium's brand color */
+}
 
-	</body>
+.social-media-item.medium:hover i,
+.social-media-item.medium:hover h3,
+.social-media-item.medium:hover a {
+    color: #fff;
+}
+
+/* HackerRank Hover Effect */
+.social-media-item.hackerrank:hover {
+    background-color: #2ec866; /* HackerRank's brand color */
+}
+
+.social-media-item.hackerrank:hover i,
+.social-media-item.hackerrank:hover h3,
+.social-media-item.hackerrank:hover a {
+    color: #fff;
+}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Icons -->
+    <div class="header">
+        <a href="#home" title="Home"><i class="fas fa-home"></i></a>
+        <a href="#about" title="About"><i class="fas fa-user"></i></a>
+        <a href="#portfolio" title="Projects"><i class="fas fa-folder"></i></a>
+        <a href="#contact" class="hire-me-btn" title="Hire Me"><i class="fas fa-briefcase"></i></a>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/chaitanya-handore-8a3ba024b" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ChaitanyaHandore" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://medium.com/@chaitanyahandore" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-medium-m"></i>
+        </a>
+        <a href="https://x.com/ChaitanyaHando1" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+
+    <div id="fullpage">
+        <!-- start home -->
+        <div id="home" class="section" style="padding-top: 180px; padding-right: 150px">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center wow fadeIn" data-wow-delay="0.9s">
+                        <h3>Welcome to My Portfolio</h3>
+                        <h1>Chaitanya Handore</h1>
+                        <h2 class="rotate">SOFTWARE ENGINEER, AI ENTHUSIAST, WEB DEVELOPER, PROBLEM SOLVER</h2>
+                        <p>MS in Artificial Intelligence student 🎓 | WEB DEVELOPMENT | JAVA | JAVASCRIPT | MYSQL | DATA STRUCTURES AND ALGORITHMS</p>
+
+                        <div class="cta-buttons">
+                            <a href="#contact" class="btn">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                                </svg>
+                                Contact Me
+                            </a>
+                            <a href="CV.pdf" class="btn" download>
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path>
+                                </svg>
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- start work -->
+        <div id="work" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow bounce">
+                        <h2>WHAT I DO</h2>
+                    </div>
+                </div>  
+
+                <div class="row">
+                    <div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="media">
+                            <div class="media-object media-left">
+                                <i class="fa fa-laptop"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Machine Learning & AI</h3>
+                                <p>I'm passionate about building machine learning models, working with data, and creating intelligent systems using Python, TensorFlow, and scikit-learn to solve real-world problems.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="media">
+                            <div class="media-object media-left">
+                                <i class="fa fa-link"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Data Science & Analytics</h3>
+                                <p>I utilize data analytics and visualization tools like Power BI and Python's Pandas to extract valuable insights and drive decision-making from complex datasets.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="media">
+                            <div class="media-object media-left">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Web Development</h3>
+                                <p>I design and develop responsive websites that provide seamless experiences across devices using HTML, CSS, JavaScript, and frameworks like React and Angular.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end work -->
+
+        <!-- start education -->
+        <div id="education" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow bounce">
+                        <h2>EDUCATION</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
+                        <h3>Master’s in Artificial Intelligence</h3>
+                        <h4>Dublin Business School, Dublin, Ireland</h4>
+                        <p>Focus Areas: Machine Learning & Pattern Recognition, Deep Learning, Graph & AI, Programming for Data Analysis, Cognitive & Ethical Dimensions of Artificial Intelligence.</p>
+                        <p>Sep 2024 - Sep 2025</p>
+                    </div>
+                    <div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
+                        <h3>Bachelor of Computer Science</h3>
+                        <h4>K. K. Wagh College, India</h4>
+                        <p>Core Subjects: Core & Advanced Java, Python, DBMS & RDBMS, Data Structures and Algorithms, Operating Systems, Data Science, Software Testing.</p>
+                        <p>CGPA - 8.23</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end education -->
+
+        <!-- start about -->
+        <div id="about" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
+                        <h2>ABOUT Chaitanya</h2>
+                        <h4>Software Engineer &AMP;  AI Enthusiast</h4>
+                        <p>I’m Chaitanya Handore, a master’s student in Artificial Intelligence at Dublin Business School, passionate about software engineering, AI, and data analytics. Skilled in Python, Java, Machine Learning, and data-driven decision-making, I excel at solving real-world problems through innovative solutions.</p>
+                        <p>I enjoy tackling challenges, leveraging technology to drive efficiency, and turning data into actionable insights. My goal is to contribute to impactful projects that combine AI and analytics to create meaningful change.</p>
+                    </div>
+                    <div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
+                        <span class="text-top">Python <small>80%</small></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                        </div>
+                        <span>Machine Learning <small>80%</small></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                        </div>
+                        <span>Java <small>70%</small></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                        </div>
+                        <span> MySQL <small>80%</small></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                        </div>
+                        <span>Hadoop &AMP; Pyspark <small>60%</small></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end about -->
+
+        <!-- start portfolio -->
+        <div id="portfolio" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="wow bounce">MY PORTFOLIO</h2>
+                    </div>
+                    <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img">
+                            <div class="portfolio-overlay">
+                                <h4>Leave Management System</h4>
+                                <h5>Technologies: HTML, CSS, JavaScript, PHP, MySQL</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img">
+                            <div class="portfolio-overlay">
+                                <h4>Gym Management System</h4>
+                                <h5>Technologies: HTML, CSS, JavaScript, PHP</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img">
+                            <div class="portfolio-overlay">
+                                <h4>Data Science Project</h4>
+                                <h5>Technologies: Python, Pandas, Machine Learning</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img">
+                            <div class="portfolio-overlay">
+                                <h4>Machine Learning Model</h4>
+                                <h5>Technologies: Python, Scikit-Learn</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio-img5.jpg" class="img-responsive" alt="portfolio img">
+                            <div class="portfolio-overlay">
+                                <h4>Web Development Project</h4>
+                                <h5>Technologies: HTML, CSS, PHP, JavaScript</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end portfolio -->
+
+     <div class="social-media-container">
+    <div class="social-media-item github">
+        <i class="fab fa-github"></i>
+        <h3>GitHub</h3>
+        <p>Explore my projects and code on GitHub.</p>
+        <a href="https://github.com/ChaitanyaHandore" target="_blank">Visit</a>
+    </div>
+    <div class="social-media-item linkedin">
+        <i class="fab fa-linkedin"></i>
+        <h3>LinkedIn</h3>
+        <p>Join me on LinkedIn for work connections.</p>
+        <a href="https://www.linkedin.com/in/chaitanya-handore-8a3ba024b" target="_blank">Visit</a>
+    </div>
+    <div class="social-media-item medium">
+        <i class="fab fa-medium"></i>
+        <h3>Medium</h3>
+        <p>Read on Medium where I write about tech.</p>
+        <a href="https://medium.com/@chaitanyahandore" target="_blank">Visit</a>
+    </div>
+    <div class="social-media-item hackerrank">
+        <i class="fab fa-hackerrank"></i>
+        <h3>HackerRank</h3>
+        <p>Check out my coding skills on HackerRank.</p>
+        <a href="https://www.hackerrank.com/profile/handorechaitany1" target="_blank">Visit</a>
+    </div>
+</div>
+
+        <!-- start contact -->
+        <div id="contact" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-lg-offset-1 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <address>
+                            <p class="contact-title">CONTACT ME</p>
+                            <p><i class="fa fa-phone"></i> +353 870979792</p>
+                            <p><i class="fa fa-envelope-o"></i> me@chaitanyahandore.com</p>
+                            <p><i class="fa fa-map-marker"></i> Dublin, Ireland</p>
+                        </address>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
+                        <form role="form" method="post" action="#">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Your Name">
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Your Email">
+                            <textarea name="message" rows="5" class="form-control" id="message" placeholder="Your Message"></textarea>
+                            <input name="send" type="submit" class="form-control" id="send" value="SEND ME">
+                        </form>
+                    </div>
+                    <div class="col-md-1 col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end contact -->
+
+        <!-- start footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow fadeIn" data-wow-delay="0.9s">
+                        <p> &copy; 2025 Chaitanya Handore. All rights reserved.</p>
+                        <hr>
+                        <ul class="social-icon">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- fullpage -->
+    <script src="js/jquery.fullPage.js"></script>
+    <!-- smoothScroll -->
+    <script src="js/smoothscroll.js"></script>
+    <!-- wow -->
+    <script src="js/wow.min.js"></script>
+    <!-- text rotater -->
+    <script src="js/jquery.simple-text-rotator.js"></script>
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('.header a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+
+</body>
 </html>
